@@ -31,8 +31,8 @@ shinyServer(function(input, output, session) {
                 output$word1 <- renderText(result[1])
                 output$word2 <- renderText(result[2])
                 output$word3 <- renderText(result[3])
-                output$textEntered <- renderText(sentenca)
-                output$textEntered2 <- renderText(paste(words,collapse=";"))
+#                 output$textEntered <- renderText(sentenca)
+#                 output$textEntered2 <- renderText(paste(words,collapse=";"))
         })
 
 })
