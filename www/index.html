@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<title>Monkey Writer</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!-- Optional: Include the jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="shared/jquery.js" type="text/javascript"></script>
+<script src="shared/shiny.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="shared/shiny.css"/> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+textarea {
+    display: block;
+    width: 100%;
+    padding:2%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+        <div class="row">
+                <h1>Monkey Writer</h1>
+        </div>
+        <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-2">
+                        <div class="row">
+                                <kbd>Ctrl-2</kbd>
+                                <pre id="word2" class="shiny-text-output"></pre>
+                        </div>
+                </div>
+                <div class="col-sm-2">
+                        <div class="row">
+                                <kbd>Ctrl-1</kbd>
+                                <pre id="word1" class="shiny-text-output"></pre>
+                        </div>
+                </div>
+                <div class="col-sm-2">
+                        <div class="row">
+                                <kbd>Ctrl-3</kbd>
+                                <pre id="word3" class="shiny-text-output"></pre>
+                        </div>
+                </div>
+                <div class="col-sm-3"></div>
+        </div>
+        <div class="row">
+                <center><p>input phrase below</p></center>
+        </div>
+        <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8"><textarea id="textentry" rows="10"></textarea></div>
+                <div class="col-sm-2"></div>
+        </div>
+        <div class="row">
+                <pre id="textEntered" class="shiny-text-output"></pre>
+                <pre id="textEntered2" class="shiny-text-output"></pre>
+                <pre id="numberWords" class="shiny-text-output"></pre>
+        </div>
+</div>
+</body>
+</html>
