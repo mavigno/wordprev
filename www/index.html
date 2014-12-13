@@ -116,7 +116,7 @@ function clearText()
         </div>
         <div class="row"><br></div>
         <div class="row">
-        <div class="col-sm-3"></div>
+                <div class="col-sm-2"></div>
                 <div class="col-sm-2">
                         <div class="row">
                                 <button id="cleartext" onClick="clearText()" type="button" class="btn action-button">Clear</button>
@@ -124,22 +124,27 @@ function clearText()
                 </div>
                 <div class="col-sm-2">
                         <div class="row">
-                                <button id="pastetext" onClick="pasteText()" type="button" class="btn action-button">Paste</button>
+                                <button id="babbletext" onClick="babble()" type="button" class="btn action-button">Babble</button> 
                         </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                         <div class="row">
-                                <button id="babbletext" onClick="babble()" type="button" class="btn action-button">Babble</button>
+                                <label for="numwords"># of words:</label>
+<input id="numwords" type="number" value="1" min="1" max="100"/>  
+                        </div>
+                        
+                </div>
+                <div class="col-sm-3">
+                        <div class="row">
+                                <label for="random">Random:</label>
+                                <select id="random">
+                                <option value=1>TRUE</option>
+                                <option value=0 selected>FALSE</option>
+                                </select>
+                                <script type="application/json" data-for="random" data-nonempty="">{}</script> 
                         </div>
                 </div>
-                <div class="col-sm-3"></div>
-                
-        <!--
-                <pre id="debugout" class="shiny-text-output"></pre>
-                <pre id="debugout2" class="shiny-text-output"></pre>
-        -->
         </div>
-</div>
 </div>
 </body>
 </html>

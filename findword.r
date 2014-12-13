@@ -74,15 +74,19 @@ findWord <- function(words) {
 
 }
 
-babble <- function(word,n=10) {
-        sent <- word
+babble <- function(sentenca,n=1,random=FALSE) {
+        sent <- normalize(lastSentence(sentenca))
+        word <- last4(str_trim(sent))
+        sent <- str_split(sentenca,"\\W+")
+        sent <- sent[-1]
         for (i in 1:n) {
                 words <- findWord(word)
-                found <- words[round(runif(1,min=1,max=3))]
+                if (random) found <- words[round(runif(1,min=1,max=3))]
+                else found <- words[1]
                 sent <- c(sent,found)
                 word <- last4(c(word,found))
         }
-        print(paste(sent,collapse=" "))
+        return(paste(sent,collapse=" "))
 }
 
 transContractions <- function(transvr) {
