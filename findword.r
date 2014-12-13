@@ -1,3 +1,14 @@
+library(data.table)
+library(tm)
+library(stringr)
+library(NLP)
+library(openNLP)
+load("data/n2rF.rds")
+load("data/n3rF.rds")
+load("data/n4rF.rds")
+load("data/n5rF.rds")
+load("data/vocabulary-reduced.rds")
+load("data/contractions.rds")
 lastSentence <- function(texto) {
         if (str_length(texto) < 1) {
                 return("")
@@ -25,6 +36,7 @@ last4 <- function(sentence) {
         from <- l - 3
         to <- l
         if ( l > 4) words <- words[from:to]
+        words <- transContractions(words)
         return(words)
 }
 findWord <- function(words) {
@@ -56,8 +68,9 @@ findWord <- function(words) {
         result <- result[!is.na(result)]
         result <- names(vr[result])
         result <- result[!duplicated(result)]
+        result <- transContractions(result)
         return(result)
-
+        
 
 }
 
@@ -70,4 +83,13 @@ babble <- function(word,n=10) {
                 word <- last4(c(word,found))
         }
         print(paste(sent,collapse=" "))
+}
+
+transContractions <- function(transvr) {
+        for (i in 1:nrow(contractions)) {
+                from <- paste0("^",contractions[i,"word"],"$")
+                to <- contractions[i,"trans"]
+                transvr <- gsub(from,to,transvr)
+        }
+        return(transvr)
 }
