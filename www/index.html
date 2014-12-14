@@ -73,24 +73,24 @@ function babble()
 <div class="col-sm-4" background="gray">
 <div class="hero-unit">
                 <p>"Monkey Writer" is a Shiny application made to show the 
-                work done in the Coursera Data Science Capstone Project</p>
-                <p>The application try to predict the next word in the 
-                phrase writed by the user. It gives 3 alternatives based 
+                NLP work done in the Coursera Data Science Capstone Project</p>
+                <p>The application try to predict the next word of the user's'
+                phrase. It gives 3 alternatives based 
                 in the last 4 words entered in the textbox.
                 The predicted alternatives will appear above the textbox, and
-                the user can choose which one she want's by pressing the control 
+                the user can choose which one she wants by pressing the control 
                 keys indicated above then.<br>
                 <kbd>Ctrl-1</kbd> is for the word with the greatest probability,<br>
-                <kbd>Ctrl-2</kbd> for the word with the probability below the one
-                before, and so on.<br>
-                <p>The buttons below the textbox are helpers.<br>
+                <kbd>Ctrl-2</kbd> for the word with the probability below the first, 
+                and so on.<br>
+                <p>The buttons below the textbox are helpers:<br>
                 <kbd>Clear</kbd> will erase the textbox and put the application in the 
                 initial state.<br>
                 <kbd>Babble</kbd> will generate pharases based on the words present in the
                 textbox, with some parameters:<br>
                 <ul>
                         <li><b># of words</b> specify how many words are generated with the input.</li>
-                        <li><b>Random</b> specify how this words are generated. If <b>TRUE</b> it will get 1 word between the first 3 with greatest probability. If <b>FALSE</b> the choice will be always the word with the gratest probability.</li>
+                        <li><b>Random</b> specify how the words are choosen. If <b>TRUE</b> it will get 1 word randomly between the first 3 with greatest probability. If <b>FALSE</b> the choice will be always the word with the greatest probability.</li>
                 </ul><br>
                 One can think of <kbd>Babble</kbd> with the options <b># of words=1</b> and <b>random=FALSE</b> as a <b>Submit</b> button. Where only one word is generate for the text in the textbox.
                 </p>
